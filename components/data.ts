@@ -42,4 +42,6 @@ export const WORKS = [
   { title: "Harbor Weather", note: "Tide and wind, drawn as postcards", year: "2025", tags: ["Figma", "React"], img: "https://picsum.photos/seed/harbor/900/700" },
   { title: "Pocket Studio", note: "A tiny mobile app for mood boards", year: "2025", tags: ["Mobile", "Claude"], img: "https://picsum.photos/seed/pocket-studio/900/700" },
   { title: "Orbit Notes", note: "Notes that drift toward what matters", year: "2024", tags: ["Motion", "UI / UX"], img: "https://picsum.photos/seed/orbit-notes/900/700" },
+  { title: "Graphic Design", note: "Notes that drift toward what matters", year: "2024", tags: ["Motion", "UI / UX"], img: "https://picsum.photos/seed/orbit-notes/900/700" },  
+  { title: "UI UX Design", note: "Notes that drift toward what matters", year: "2024", tags: ["Motion", "UI / UX"], img: "https://picsum.photos/seed/orbit-notes/900/700" },  
 ];
