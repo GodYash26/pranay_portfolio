@@ -7,20 +7,34 @@ export type Section = {
 
 // TODO: replace the email, stats and project list with Debbie's real details.
 export const SECTIONS: Section[] = [
-  { label: ["PORT", "FOLIO"], tag: "DEBBIE", c: "#e5322d", k: "#a91f1b", acc: "#ff6b63", kicker: "01 / HELLO", h: ["Hi, I'm ", "Debbie", "."],
-    p: "A vibe coder with a curious mind, building playful digital experiences. Every container in the pile holds a piece of my work." },
-  { label: ["THE", "WORK"], tag: "02", c: "#f26a1f", k: "#b84a10", acc: "#ff9455", kicker: "02 / SELECTED WORK", h: ["The ", "work", "."],
-    list: [["Zenwood Keyboard", "a portfolio you click like a keyboard"], ["Retro Portfolio Machine", "a yellow computer that types my story"], ["Portfolio Console", "a graphite case with terminal keys"]] },
-  { label: ["ABOUT", "ME"], tag: "03", c: "#1d55d8", k: "#123a9c", acc: "#7aa5ff", kicker: "03 / ABOUT ME", h: ["A little about ", "me", "."],
-    p: "I design with AI as a creative partner: Figma, Claude and a lot of heart. 50 apps built and trusted by 30 brands along the way." },
-  { label: ["PRO", "CESS"], tag: "04", c: "#f6b919", k: "#c08a0a", acc: "#ffd23f", kicker: "04 / PROCESS", h: ["How I ", "build", "."],
-    list: [["01 Talk", "we start with a conversation"], ["02 Sketch", "shape the idea together"], ["03 Build & launch", "ship it, then keep improving"]] },
-  { label: ["TOOL", "KIT"], tag: "05", c: "#97a1ad", k: "#6c7682", acc: "#c9d2dc", kicker: "05 / TOOLKIT", h: ["What's in the ", "box", "."],
-    chips: ["Figma", "Claude", "React", "CSS", "Motion", "Prototyping"] },
-  { label: ["WHAT", "I DO"], tag: "06", c: "#e5322d", k: "#a91f1b", acc: "#ff6b63", kicker: "06 / WHAT I DO", h: ["What I ", "do", "."],
-    chips: ["Interaction design", "Motion design", "Prototyping", "UI / UX design"] },
-  { label: ["SAY", "HELLO"], tag: "07", c: "#2546b8", k: "#172f80", acc: "#8fa8ff", kicker: "07 / SAY HELLO", h: ["Got an ", "idea", "?"],
-    p: "Have a project in mind, a half-formed idea, or just want to say hi?", cta: { text: "hello@debbie.example ↗", href: "mailto:hello@debbie.example" } },
+  {
+    label: ["PORT", "FOLIO"], tag: "Pranayan", c: "#e5322d", k: "#a91f1b", acc: "#ff6b63", kicker: "01 / HELLO", h: ["Hi, I'm ", "Pranayan", "."],
+    p: "I am a Logo & Brand Design Specialist with stunning eye to the details."
+  },
+  {
+    label: ["THE", "WORK"], tag: "02", c: "#f26a1f", k: "#b84a10", acc: "#ff9455", kicker: "02 / SELECTED WORK", h: ["The ", "work", "."],
+    list: [["Specialized in static Design"], ["Premium Logo & Brand Designs"], ["Portfolio Console", "check my works more at Behance (Pranayan Regmi)."]]
+  },
+  {
+    label: ["ABOUT", "ME"], tag: "03", c: "#1d55d8", k: "#123a9c", acc: "#7aa5ff", kicker: "03 / ABOUT ME", h: ["A little about ", "me", "."],
+    p: "I turn blank Canvas into bold ideas. I can be your Creative mind who blends Creativity, Strategy & Visual Storytelling to create work that feels right and get's Noticed."
+  },
+  {
+    label: ["PRO", "CESS"], tag: "04", c: "#f6b919", k: "#c08a0a", acc: "#ffd23f", kicker: "04 / PROCESS", h: ["How I ", "build", "."],
+    list: [["01 Talk", "we start with a conversation"], ["02 Sketch", "shape the idea together"], ["03 Design & Review", "different people, different perspective"]]
+  },
+  {
+    label: ["TOOL", "KIT"], tag: "05", c: "#97a1ad", k: "#6c7682", acc: "#c9d2dc", kicker: "05 / TOOLKIT", h: ["What's in the ", "box", "."],
+    chips: ["Adobe Illustrator", "Adobe Photoshop", "Lightroom", "Premier Pro", "Canva", "Motion Graphics", "Capcut"]
+  },
+  {
+    label: ["WHAT", "I DO"], tag: "06", c: "#e5322d", k: "#a91f1b", acc: "#ff6b63", kicker: "06 / WHAT I DO", h: ["What I ", "do", "."],
+    chips: ["Graphic design", "Motion design", "Logo design", "Brand Design", "Printing & Packaging Design,"]
+  },
+  {
+    label: ["SAY", "HELLO"], tag: "07", c: "#2546b8", k: "#172f80", acc: "#8fa8ff", kicker: "07 / SAY HELLO", h: ["Got an ", "idea", "?"],
+    p: "Have a project in mind, a half-formed idea, or just want to say hi?", cta: { text: "pranayan.com.np↗", href: "mailto:pranayanregmi15@gmail.com" }
+  },
 ];
 
 // [desktop x,y] [phone x,y] as fractions of the stage; tilt = rotateX, rotateY, rotateZ
@@ -42,6 +56,6 @@ export const WORKS = [
   { title: "Harbor Weather", note: "Tide and wind, drawn as postcards", year: "2025", tags: ["Figma", "React"], img: "https://picsum.photos/seed/harbor/900/700" },
   { title: "Pocket Studio", note: "A tiny mobile app for mood boards", year: "2025", tags: ["Mobile", "Claude"], img: "https://picsum.photos/seed/pocket-studio/900/700" },
   { title: "Orbit Notes", note: "Notes that drift toward what matters", year: "2024", tags: ["Motion", "UI / UX"], img: "https://picsum.photos/seed/orbit-notes/900/700" },
-  { title: "Graphic Design", note: "Notes that drift toward what matters", year: "2024", tags: ["Motion", "UI / UX"], img: "https://picsum.photos/seed/orbit-notes/900/700" },  
-  { title: "UI UX Design", note: "Notes that drift toward what matters", year: "2024", tags: ["Motion", "UI / UX"], img: "https://picsum.photos/seed/orbit-notes/900/700" },  
+  { title: "Graphic Design", note: "Notes that drift toward what matters", year: "2024", tags: ["Motion", "UI / UX"], img: "https://picsum.photos/seed/orbit-notes/900/700" },
+  { title: "UI UX Design", note: "Notes that drift toward what matters", year: "2024", tags: ["Motion", "UI / UX"], img: "https://picsum.photos/seed/orbit-notes/900/700" },
 ];
