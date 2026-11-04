@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Registered so the real box size can animate (text stays sharp, no scale()) */
+@property --w  { syntax: "<length>"; inherits: true; initial-value: 0px; }
+@property --h  { syntax: "<length>"; inherits: true; initial-value: 0px; }
+@property --d  { syntax: "<length>"; inherits: true; initial-value: 0px; }
+@property --cw { syntax: "<length>"; inherits: true; initial-value: 0px; }
+
+html, body { margin: 0; background: #0f74e0; }
+body { overflow-x: clip; } /* clip (not hidden) so the sticky hero keeps working */
+
+.depot-bg { background: linear-gradient(180deg, #0f74e0 0%, #1f93f2 55%, #46b8ff 100%); }
+.depot-bg::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* ---------- 3D container ---------- */
+.box { position: absolute; transform-style: preserve-3d; width: var(--w); height: var(--h); }
+.box:not(.up):hover, .box:not(.up):focus-within { translate: 0 -10px; }
+.face { position: absolute; backface-visibility: hidden; border: 1px solid rgba(0,0,0,.28); box-sizing: border-box; }
+.ribs   { background: repeating-linear-gradient(90deg, rgba(255,255,255,.14) 0 2px, rgba(0,0,0,.13) 2px 5px), var(--c); }
+.ribs-k { background: repeating-linear-gradient(90deg, rgba(255,255,255,.1) 0 2px, rgba(0,0,0,.14) 2px 5px), var(--k); }
+.end {
+  background:
+    linear-gradient(90deg, transparent calc(50% - 1px), rgba(0,0,0,.35) calc(50% - 1px) calc(50% + 1px), transparent 0),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.1) 0 2px, rgba(0,0,0,.14) 2px 5px), var(--k);
+}
+.front { position: absolute; inset: 0; display: block; padding: 0; border: 0; background: none; cursor: pointer; transform-style: preserve-3d; }
+.front:focus-visible { outline: 3px solid #ffd23f; outline-offset: -4px; }
+.door { position: absolute; top: 0; width: 50%; height: 100%; transform-style: preserve-3d; }
+.dl { left: 0; transform-origin: left center; }
+.dr { right: 0; transform-origin: right center; }
+.df { position: absolute; inset: 0; backface-visibility: hidden; border: 1px solid rgba(0,0,0,.3); box-sizing: border-box; }
+.df.in { transform: rotateY(180deg); background: var(--k); }
+.dr .df.out { box-shadow: inset 2px 0 0 rgba(0,0,0,.28); }
+.lab { position: absolute; left: 10%; top: 8%; margin: 0; color: #fff; text-align: left; white-space: nowrap; text-transform: uppercase;
+  font-family: "Clash Display", system-ui, sans-serif; font-weight: 700; line-height: .84; text-shadow: 0 1px 0 rgba(0,0,0,.15); }
+.tag { position: absolute; right: 9%; bottom: 8%; color: #fff; font-weight: 800; letter-spacing: .2em; font-size: calc(var(--h) * .08); }
+.wall {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,.04) 0 2px, transparent 2px 6px), #0b1a3d;
+  font-size: calc(var(--h) * .072); color: #dbe6f5;
+}
+
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
